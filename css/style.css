@@ -1,0 +1,122 @@
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  color: #333;
+}
+
+/* Header styling */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #000;
+  color: #fff;
+}
+
+.logo img {
+  height: 50px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  display: inline;
+  margin-right: 20px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  background: linear-gradient(45deg, white, white, white,
+  #f7dc66, #a8216b, #f1184c, #f36943);
+  background-size: 300%;
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: background-position 0.5s ease-in-out, transform 0.5s ease-in-out;
+  display: inline-block;
+}
+
+a:hover {
+  background-position: 100%;
+  transform: scale(1.2);
+}
+
+.icon-container {
+  display: flex;
+  gap: 20px;
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+  object-fit: fill;
+  border-radius: 10px;
+}
+
+.fa-telegram {
+  width: 50px;
+  height: 50px;
+  object-fit: fill;
+  border-radius: 10px;
+}
+
+/* Banner section */
+.banner {
+  background-color: #f8f8f8;
+}
+
+.banner img {
+  width: 100%;
+  height: auto;
+}
+
+/* Content section */
+.content {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 20px;
+}
+
+.game-preview img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.text-content {
+  max-width: 500px;
+}
+
+.text-content h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.text-content p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.app-links img {
+  height: 100px;
+}
+
+video {
+  width: 100%;
+  max-width: 850px;
+  border-radius: 20px;
+  display: block;
+  margin: 0 auto;
+}
