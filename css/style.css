@@ -24,16 +24,31 @@ header {
 .logo img {
   height: 50px;
 }
+@media (orientation: portrait) {
+  .logo img {
+    display: none;
+  }
+}
 
 ul {
   list-style-type: none;
   padding: 0;
 }
 
-li {
-  display: inline;
-  margin-right: 20px;
+@media (orientation: landscape) {
+  li {
+    display: inline;
+    margin-right: 20px;
+  }
 }
+
+@media (orientation: portrait) {
+  li {
+    display: none;
+    margin-right: 20px;
+  }
+}
+
 
 a {
   text-decoration: none;
@@ -45,7 +60,14 @@ a {
   -webkit-background-clip: text;
   color: transparent;
   transition: background-position 0.5s ease-in-out, transform 0.5s ease-in-out;
-  display: inline-block;
+  @media (orientation: landscape) {
+    display: inline-block;
+  }
+  @media (orientation: portrait) {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
 }
 
 a:hover {
@@ -74,7 +96,7 @@ a:hover {
 
 /* Banner section */
 .banner {
-  background-color: #f8f8f8;
+  background-color: black;
 }
 
 .banner img {
@@ -109,14 +131,73 @@ a:hover {
   margin-bottom: 20px;
 }
 
-.app-links img {
-  height: 100px;
+.app-links {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center;
 }
 
-video {
-  width: 100%;
-  max-width: 850px;
-  border-radius: 20px;
-  display: block;
-  margin: 0 auto;
+.app-links img {
+  height: 100px;
+
 }
+
+@media (orientation: landscape) {
+  video {
+    width: 100%;
+    max-width: 850px;
+    border-radius: 20px;
+    display: block;
+    margin: 0 auto;
+    padding: 20px;
+  }
+}
+
+@media (orientation: portrait) {
+  video {
+    display: none;
+  }
+}
+
+@media (orientation: portrait) {
+  /* Basic styling for the dropdown */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-button {
+    background-color: black;
+    border: none;
+    margin-right: 200px;
+  }
+}
+
+@media (orientation: landscape) {
+  .dropdown {
+    display: none;
+  }
+}
+
+/* Container for the dropdown links */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: black;
+  min-width: 160px;
+  border-radius: 10px;
+  z-index: 1;
+}
+
+
+
+/* Show the dropdown content when hovering over the dropdown */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change button color when hovering */
+.dropdown:hover .dropdown-button {
+  transform: scale(1.2);
+}
+
