@@ -1,4 +1,5 @@
-/* Reset default margin and padding */
+
+/*Body*/
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +7,8 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  font-family: "Roboto Light", sans-serif;
   background-color: #fff;
   color: #333;
 }
@@ -17,33 +19,75 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
+
   background-color: #000;
   color: #fff;
+}
+
+/*Logo of game*/
+
+.mobile .logo {
+  display: none;
 }
 
 .logo img {
   height: 50px;
 }
- .mobile .logo img {
-    display: none;
-  }
 
+ /* Navigation */
 
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-   li {
+   .navigationLink {
     display: inline;
     margin-right: 20px;
   }
 
-  .mobile li {
+  .mobile .navigationLink {
     display: none;
-    margin-right: 20px;
   }
 
+/*Navigation for mobile*/
+
+.navigationMenu {
+  display: none;
+}
+.mobile .navigationMenu {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+}
+
+.menuButton {
+  background-color: black;
+  border: none;
+  margin-right: auto;
+  color: white;
+}
+
+.menuContent {
+  display: none; /* Hidden by default */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: black;
+  min-width: 200px;
+  border-radius: 10px;
+  z-index: 99;
+  color: white;
+  padding: 10px;
+}
+
+.menuContent a {
+  display: block; /* Stack links vertically */
+  padding: 10px; /* Padding around each link */
+}
+
+/* Change button color when hovering */
+.navigationMenu:hover .menuButton {
+  transform: scale(1.2);
+}
+
+/* Nice styling for general links */
 
 a {
   text-decoration: none;
@@ -55,14 +99,7 @@ a {
   -webkit-background-clip: text;
   color: transparent;
   transition: background-position 0.5s ease-in-out, transform 0.5s ease-in-out;
-  @media (orientation: landscape) {
-    display: inline-block;
-  }
-  @media (orientation: portrait) {
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
+  display: inline-block;
 }
 
 a:hover {
@@ -70,31 +107,24 @@ a:hover {
   transform: scale(1.2);
 }
 
-.icon-container {
+/*Social media*/
+
+.socialMedia-container {
   display: flex;
   gap: 20px;
 }
 
-.icon {
+.mobile .socialMedia-container {
+  gap: 10px;
+}
+
+.socialMediaIcon {
   width: 50px;
   height: 50px;
   object-fit: fill;
-  border-radius: 10px;
 }
 
-.fa-telegram {
-  width: 50px;
-  height: 50px;
-  object-fit: fill;
-  border-radius: 10px;
-}
-
-/* Banner section */
-.banner {
-  background-color: black;
-}
-
-.banner img {
+.mainPhoto img {
   width: 100%;
   height: auto;
 }
@@ -104,11 +134,6 @@ a:hover {
   display: flex;
   justify-content: space-between;
   padding: 40px 20px;
-}
-
-.game-preview img {
-  width: 100%;
-  border-radius: 20px;
 }
 
 .text-content {
@@ -125,67 +150,48 @@ a:hover {
   line-height: 1.6;
   margin-bottom: 20px;
 }
-
+/*link to App Store*/
 .app-links {
   display: flex;
-  justify-content: center; /* Center horizontally */
+  justify-content: center;
   align-items: center;
 }
 
 .app-links img {
   height: 100px;
-
 }
-  video {
-    width: 100%;
-    max-width: 850px;
-    border-radius: 20px;
-    display: block;
-    margin: 0 auto;
+
+/*Video of Application*/
+
+video {
+  width: 100%;
+  max-width: 850px;
+  border-radius: 60px;
+  display: block;
+  margin: 0 auto;
+}
+
+/*If you are on mobile*/
+
+@media (max-width: 768px) {
+  .content {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+  }
+
+  .text-content {
+    order: 1;
     padding: 20px;
   }
 
+  .game-preview {
+    order: 2;
+  }
+
   .mobile video {
-    display: none;
+    border-radius: 30px;
   }
-
-
-  /* Basic styling for the dropdown */
-  .mobile .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-
-  .mobile .dropdown-button {
-    background-color: black;
-    border: none;
-    margin-right: 200px;
-  }
-
-   .dropdown {
-    display: none;
-  }
-
-
-/* Container for the dropdown links */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: black;
-  min-width: 160px;
-  border-radius: 10px;
-  z-index: 1;
 }
 
 
-
-/* Show the dropdown content when hovering over the dropdown */
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-/* Change button color when hovering */
-.dropdown:hover .dropdown-button {
-  transform: scale(1.2);
-}
 

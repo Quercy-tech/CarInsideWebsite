@@ -6,8 +6,6 @@
   <title>CarInside website</title>
   <link rel="icon" type="image/x-icon" href="CarLogoEmpty.ico">
   <link rel="stylesheet" href="css/style.css">
-
-
 </head>
 <body>
 <script src="js/app.js"></script>
@@ -16,58 +14,87 @@
     <img src="CarLogoEmpty.png" alt="Application logo">
   </div>
   <nav>
-    <!-- Banner section -->
-    <div class="dropdown">
-      <button class="dropdown-button"><img src="HamburgerWhite.png" alt="menu" class="icon"></button>
-      <div class="dropdown-content">
-        <a href="#">Games</a>
+    <!-- Navigation -->
+
+    <!-- On mobile -->
+
+    <div class="navigationMenu">
+      <button class="menuButton" id="menuToggle" onclick="menuClick()">
+        <img src="HamburgerWhite.png" alt="Menu button" class="socialMediaIcon" id="menuIcon">
+      </button>
+      <div class="menuContent" id="menuContent">
+        <a href="#" >Applications</a>
         <a href="#">License</a>
         <a href="#">About Us</a>
       </div>
     </div>
 
-    <!-- Horizontal orientation -->
+
+    <!-- On desktop -->
 
     <ul>
-      <li><a href="#">Games</a></li>
-      <li><a href="#">License</a></li>
-      <li><a href="#">About Us</a></li>
+      <li class="navigationLink"><a href="#">Applications</a></li>
+      <li class="navigationLink"><a href="#">License</a></li>
+      <li class="navigationLink"><a href="#">About Us</a></li>
     </ul>
   </nav>
-  <div class="icon-container">
+
+  <!-- Social media links -->
+
+  <div class="socialMedia-container">
+
     <a href="https://t.me/hezhalex/" target="_blank">
-      <img src="Telegram.png" alt="Telegram" class="icon">
+      <img src="Telegram.png" alt="Telegram" class="socialMediaIcon">
     </a>
+
     <a href="https://www.instagram.com/quercystudios/" target="_blank">
-      <img src="Instagram.png" alt="Instagram" class="icon">
+      <img src="Instagram.png" alt="Instagram" class="socialMediaIcon">
     </a>
+
     <a href="https://wa.me/+380509157435" target="_blank">
-      <img src="WhatsApp512.png" alt="WhatsApp" class="icon">
+      <img src="WhatsApp512.png" alt="WhatsApp" class="socialMediaIcon">
     </a>
+
   </div>
 </header>
 
-<section class="banner">
-  <img src="Banner.jpg" alt="Game Banner">
+<!-- Banner image -->
+
+<section class="mainPhoto">
+  <img src="Banner.jpg" alt="Photo of Mercedes">
 </section>
 
+<!-- Main information -->
+
 <section class="content">
+
+  <!-- Video bloc -->
+
   <div class="game-preview">
-    <video autoplay muted>
-      <source src="Banner.mov" type="video/quicktime">
+    <video autoplay muted playsinline>
+      <source src="Banner.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
   </div>
+
+  <!-- Text bloc -->
+
   <div class="text-content">
     <h1>Find information about car that you always dreamed about</h1>
     <p>So you like cars, right? And you always wanted an app where you can see specifications of cars,
     photos of them, sound of exhaust. If it's true CarInside is made just for you! And if you are only
       starting to take interest in cars – you can choose beginner level!
     </p>
+
+    <!-- Link to App Store -->
+
     <div class="app-links">
       <a href="#"><img src="AppStore.png" alt="App Store"></a>
     </div>
+
   </div>
 </section>
+
 </body>
+
 </html>
