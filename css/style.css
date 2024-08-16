@@ -24,30 +24,25 @@ header {
 .logo img {
   height: 50px;
 }
-@media (orientation: portrait) {
-  .logo img {
+ .mobile .logo img {
     display: none;
   }
-}
+
 
 ul {
   list-style-type: none;
   padding: 0;
 }
 
-@media (orientation: landscape) {
-  li {
+   li {
     display: inline;
     margin-right: 20px;
   }
-}
 
-@media (orientation: portrait) {
-  li {
+  .mobile li {
     display: none;
     margin-right: 20px;
   }
-}
 
 
 a {
@@ -141,8 +136,6 @@ a:hover {
   height: 100px;
 
 }
-
-@media (orientation: landscape) {
   video {
     width: 100%;
     max-width: 850px;
@@ -151,33 +144,28 @@ a:hover {
     margin: 0 auto;
     padding: 20px;
   }
-}
 
-@media (orientation: portrait) {
-  video {
+  .mobile video {
     display: none;
   }
-}
 
-@media (orientation: portrait) {
+
   /* Basic styling for the dropdown */
-  .dropdown {
+  .mobile .dropdown {
     position: relative;
     display: inline-block;
   }
 
-  .dropdown-button {
+  .mobile .dropdown-button {
     background-color: black;
     border: none;
     margin-right: 200px;
   }
-}
 
-@media (orientation: landscape) {
-  .dropdown {
+   .dropdown {
     display: none;
   }
-}
+
 
 /* Container for the dropdown links */
 .dropdown-content {
