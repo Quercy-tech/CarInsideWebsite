@@ -117,6 +117,12 @@ a:hover {
   transform: scale(1.2);
 }
 
+.selectedLink a {
+  color: #555555;
+  margin-right: 20px;
+  display: inline;
+}
+
 /*Social media*/
 
 .socialMedia-container {
